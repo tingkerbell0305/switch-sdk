@@ -1,0 +1,4 @@
+/node_modules/
+/cjs/
+*.d.ts
+*.js.map

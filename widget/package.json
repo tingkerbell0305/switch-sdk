@@ -1,0 +1,83 @@
+{
+  "name": "@0xsquid/widget",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xsquid/api-widget.git"
+  },
+  "description": "A front end widget for using Squid",
+  "version": "1.6.17",
+  "author": "",
+  "license": "MIT",
+  "main": "./cjs/index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "import": "./index.js",
+    "require": "./cjs/index.js",
+    "default": "./index.js"
+  },
+  "dependencies": {
+    "@0xsquid/sdk": "1.14.8",
+    "@cosmjs/stargate": "0.31.3",
+    "@cosmjs/cosmwasm-stargate": "^0.31.3",
+    "@cosmsnap/snapper": "0.1.29",
+    "@floating-ui/react-dom": "^1.0.1",
+    "@floating-ui/react-dom-interactions": "^0.12.0",
+    "@ledgerhq/iframe-provider": "^0.4.3",
+    "@lottiefiles/react-lottie-player": "^3.5.0",
+    "@tanstack/react-query": "^4.3.9",
+    "@tanstack/react-query-devtools": "^4.3.9",
+    "@types/color": "^3.0.3",
+    "@types/lodash": "^4.14.186",
+    "@wagmi/connectors": "0.3.16",
+    "axios": "^0.27.2",
+    "bignumber.js": "^9.1.1",
+    "clsx": "^1.2.1",
+    "color": "^4.2.3",
+    "cosmjs-types": "^0.8.0",
+    "date-fns": "^2.29.3",
+    "fuse.js": "^6.6.2",
+    "lodash": "^4.17.21",
+    "react-content-loader": "^6.2.0",
+    "react-icons": "^4.7.1",
+    "secretjs": "^1.8.1",
+    "wagmi": "^0.12.13",
+    "zustand": "^4.1.1"
+  },
+  "resolutions": {
+    "@walletconnect/ethereum-provider": "2.7.0"
+  },
+  "peerDependencies": {
+    "ethers": "^5.7.2 || ^4.0.49",
+    "react": "^16.0.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0 || ^18.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/0xsquid/squid-widget/issues"
+  },
+  "homepage": "https://github.com/0xsquid/squid-widget#readme",
+  "release-it": {
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": {
+          "name": "conventionalcommits"
+        },
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    },
+    "git": {
+      "tagName": "v${version}",
+      "pushRepo": "https://github.com/0xsquid/squid-widget.git",
+      "commitMessage": "chore: branch cut release for widget v${version}",
+      "requireBranch": "release/*"
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "private": false
+}

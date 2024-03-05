@@ -1,0 +1,140 @@
+@tailwind components;
+@tailwind utilities;
+
+
+
+#squid-widget .tw-invert {
+  filter: invert(1) !important;
+}
+
+#squid-widget * {
+  color: inherit;
+  box-sizing: border-box;
+}
+
+#squid-widget li{
+  margin-bottom: 0px;
+}
+
+#squid-widget input, 
+#squid-widget button {
+	border: none;
+	background: transparent;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+#squid-widget button {
+  cursor: pointer;
+  padding: 0px;
+}
+
+#squid-widget ul {
+	padding-left: 0px;
+  margin: 0px;
+}
+
+#squid-widget span,
+#squid-widget a {
+  text-decoration: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+#squid-widget #keystroke {
+  stroke: hsl(var(--sc)) !important;
+}
+
+#squid-widget #keyfill {
+  fill: hsl(var(--s)) !important;
+}
+
+
+/* ---------- */
+/* LOADER */
+/* ---------- */
+#squid-widget .bouncing-loader {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+#squid-widget .bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-color: #a3a1a1;
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+#squid-widget .bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#squid-widget .bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ---------- */
+/* INPUTS */
+/* ---------- */
+#squid-widget input[type="color"] {
+  border: none;
+}
+#squid-widget input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+#squid-widget input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+
+
+/* ---------- */
+/* TOGGLES */
+/* ---------- */
+#squid-widget .tw-dsw-toggle-primary:checked,
+#squid-widget .tw-dsw-toggle-primary[checked="true"],
+#squid-widget .tw-dsw-toggle-primary[aria-checked="true"] {
+  box-shadow: var(--handleoffset) 0 0 2px hsl(var(--ac)) inset,
+    0 0 0 2px hsl(var(--ac)) inset;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+
+#squid-widget .tw-dsw-toggle-secondary {
+  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px hsl(var(--b3)) inset,
+    0 0 0 2px hsl(var(--b3)) inset;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  border-color: hsl(var(--b2) / var(--tw-border-opacity));
+}
+
+#squid-widget .tw-dsw-toggle-secondary:checked,
+#squid-widget .tw-dsw-toggle-secondary[checked="true"],
+#squid-widget .tw-dsw-toggle-secondary[aria-checked="true"] {
+  box-shadow: var(--handleoffset) 0 0 2px hsl(var(--s)) inset,
+    0 0 0 2px hsl(var(--s)) inset;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+
+
+
+
+
+
+/* ---------- */
+/* BORDER RADIUS */
+/* ---------- */
+#squid-widget .tw-rounded-dropdown {
+  border-radius: var(--rounded-dropdown, 26px);
+}
